@@ -37,14 +37,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.navigation.NavController
+
 import com.elianisdev.mysecondkotlinapp.ui.theme.color1
 import com.elianisdev.mysecondkotlinapp.ui.theme.color2
 import com.elianisdev.mysecondkotlinapp.ui.theme.color3
 import com.elianisdev.mysecondkotlinapp.ui.theme.color4
 
 @Composable
-fun LoginScreen( navController: NavController){
+fun LoginScreen( ){
     //Variables to store the email and password
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -146,7 +146,9 @@ fun LoginScreen( navController: NavController){
         )
         Spacer(modifier = Modifier.size(12.dp))
         GradientButton(
-            onClick = {navController.navigate(Routes.home)},
+            onClick = {
+                //Login
+            },
             text = "Iniciar sesión",
             textColor = Color.White,
             gradient = Brush.horizontalGradient(

@@ -12,6 +12,9 @@ class MainActivity : ComponentActivity() {
         //defines the activity's layout where composable functions are called
         setContent {
             MySecondKotlinAppTheme {
+                LoginScreen()
+
+
             }
         }
     }
